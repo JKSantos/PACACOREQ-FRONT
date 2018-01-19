@@ -1,0 +1,280 @@
+profile.html
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>PCC Request System</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="stylesheet" type="text/css" href="../resource/vendor/AdminLTE/bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../resource/vendor/AdminLTE/bower_components/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../resource/vendor/AdminLTE/bower_components/Ionicons/css/ionicons.min.css">
+    <link rel="stylesheet" href="../resource/vendor/AdminLTE/dist/css/AdminLTE.min.css">
+    <link rel="stylesheet" href="../resource/vendor/AdminLTE/dist/css/skins/_all-skins.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+</head>
+
+<body class="hold-transition skin-red layout-top-nav">
+    <div>
+        <img src="../resource/images/homeheader.jpg" class="col-mid">
+    </div>
+    <div class="wrapper">
+
+        <header class="main-header">
+
+            <nav class="navbar navbar-static-top">
+                <div class="container">
+                    <div class="navbar-header">
+
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+                        <ul class="nav navbar-nav">
+                            <li class=""><a href="home.html">Home <span class="sr-only">(current)</span></a></li>
+                            <li><a href="profile.html">Profile</a></li>
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle " data-toggle="dropdown">Request<span class="caret"></span></a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="createrequest.html">Create Request</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#">My Requests</a></li>
+                                    <li class="divider"></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Budget<span class="caret"></span></a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="#">Prepare Budget Proposal</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="ProposedBudget.Html">Proposed Budget</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <form class="navbar-form navbar-left" role="search">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="navbar-search-input" placeholder="Search">
+                            </div>
+                        </form>
+                    </div>
+                    <!-- /.navbar-collapse -->
+                    <!-- Navbar Right Menu -->
+                    <div class="navbar-custom-menu">
+                        <ul class="nav navbar-nav">
+                            
+                            <!-- User Account Menu -->
+                            <li class="dropdown user user-menu">
+                                <!-- Menu Toggle Button -->
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    <!-- The user image in the navbar-->
+                                    <!-- <img src="../../dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
+                					<!-- hidden-xs hides the username on small devices so only the image appears. -->
+                                    <span class="hidden-xs">Marvin Saints</span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <!-- The user image in the menu -->
+                                    <li class="user-header">
+                                        <img src="../../dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+
+                                        <p>
+                                            Marvin Saints - Web Developer
+                                            <small>Member since Nov. 2012</small>
+                                        </p>
+                                    </li>
+                                    <!-- Menu Body -->
+                                    <li class="user-body">
+                                        <div class="row">
+                                            <div class="col-xs-4 text-center">
+                                                <a href="#">Followers</a>
+                                            </div>
+                                            <div class="col-xs-4 text-center">
+                                                <a href="#">Sales</a>
+                                            </div>
+                                            <div class="col-xs-4 text-center">
+                                                <a href="#">Friends</a>
+                                            </div>
+                                        </div>
+                                        <!-- /.row -->
+                                    </li>
+                                    <!-- Menu Footer-->
+                                    <li class="user-footer">
+                                        <div class="pull-left">
+                                            <a href="#" class="btn btn-default btn-flat">Profile</a>
+                                        </div>
+                                        <div class="pull-right">
+                                            <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- /.navbar-custom-menu -->
+                </div>
+                <!-- /.container-fluid -->
+            </nav>
+        </header>
+        <div class="content wrapper">
+            <section class="content">
+                <div class="row">
+                    <div class="wrapper">
+                        <div class="content wrapper">
+                            <section class="content">
+                                <div class="row">
+                                    <div class="box box-danger">
+                                        <div class="box-header">
+                                            <h3 class="box-title">My Requests</h3>
+                                        </div>
+                                        <!-- /.box-header -->
+                                        <div class="box-body">
+                                            <div id="example1_wrapper" class="dataTables_wrapper form-inline dt-bootstrap">
+                                                <div class="row">
+                                                    <div class="col-sm-6">
+                                                        <div class="dataTables_length" id="example1_length">
+                                                            <label>Show
+                                                                <select name="example1_length" aria-controls="example1" class="form-control input-sm">
+                                                                    <option value="10">10</option>
+                                                                    <option value="25">25</option>
+                                                                    <option value="50">50</option>
+                                                                    <option value="100">100</option>
+                                                                </select> entries</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-6">
+                                                        <div id="example1_filter" class="dataTables_filter">
+                                                            <label>Search:
+                                                                <input type="search" class="form-control input-sm" placeholder="" aria-controls="example1">
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-sm-12">
+                                                        <table id="example1" class="table table-bordered table-striped dataTable" role="grid" aria-describedby="example1_info">
+                                                            <thead>
+                                                                <tr role="row">
+                                                                    <th class="sorting_asc" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Rendering engine: activate to sort column descending" style="width: 182px;">Request No.</th>
+                                                                    <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending" style="width: 224px;">Request Type</th>
+                                                                    <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending" style="width: 199px;">Department</th>
+                                                                    <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending" style="width: 156px;">Request Created</th>
+                                                                    <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" style="width: 112px;">Date Served</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+
+                                                                <tr role="row" class="odd">
+                                                                    <td class="sorting_1">1</td>
+                                                                    <td>Purchase</td>
+                                                                    <td>Grade School</td>
+                                                                    <td>12/20/2017</td>
+                                                                    <td>1/03/2018</td>
+                                                                </tr>
+                                                                <tr role="row" class="even">
+                                                                    <td class="sorting_1">2</td>
+                                                                    <td>In Stock</td>
+                                                                    <td>High School</td>
+                                                                    <td>11/20/2017</td>
+                                                                    <td>12/01/2017</td>
+                                                                </tr>
+                                                                <tr role="row" class="odd">
+                                                                    <td class="sorting_1">3</td>
+                                                                    <td>Purchase</td>
+                                                                    <td>High School</td>
+                                                                    <td>11/20/2017</td>
+                                                                    <td>12/01/2017</td>
+                                                                </tr>
+                                                                <tr role="row" class="even">
+                                                                    <td class="sorting_1">4</td>
+                                                                    <td>In Stock</td>
+                                                                    <td>High School</td>
+                                                                    <td>11/20/2017</td>
+                                                                    <td>12/01/2017</td>
+                                                                </tr>
+                                                                <tr role="row" class="odd">
+                                                                    <td class="sorting_1">5</td>
+                                                                    <td>In Stock</td>
+                                                                    <td>High School</td>
+                                                                    <td>11/20/2017</td>
+                                                                    <td>12/01/2017</td>
+                                                                </tr>
+                                                                <tr role="row" class="even">
+                                                                    <td class="sorting_1">6</td>
+                                                                    <td>Purchase</td>
+                                                                    <td>High School</td>
+                                                                    <td>11/20/2017</td>
+                                                                    <td>12/01/2017</td>
+                                                                </tr>
+                                                                <tr role="row" class="odd">
+                                                                    <td class="sorting_1">7</td>
+                                                                    <td>Purchase</td>
+                                                                    <td>High School</td>
+                                                                    <td>11/20/2017</td>
+                                                                    <td>12/01/2017</td>
+                                                                </tr>
+                                                                <tr role="row" class="even">
+                                                                    <td class="sorting_1">8</td>
+                                                                    <td>Purchase</td>
+                                                                    <td>High School</td>
+                                                                    <td>11/20/2017</td>
+                                                                    <td>12/01/2017</td>
+                                                                </tr>
+                                                                <tr role="row" class="odd">
+                                                                    <td class="sorting_1">9</td>
+                                                                    <td>In Stock</td>
+                                                                    <td>High School</td>
+                                                                    <td>11/20/2017</td>
+                                                                    <td>12/01/2017</td>
+                                                                </tr>
+                                                                <tr role="row" class="even">
+                                                                    <td class="sorting_1">10</td>
+                                                                    <td>In Stock</td>
+                                                                    <td>High School</td>
+                                                                    <td>11/20/2017</td>
+                                                                    <td>12/01/2017</td>
+                                                                </tr>
+                                                            </tbody>
+                                                            <tfoot>
+                                                                <tr>
+                                                                    <th rowspan="1" colspan="1">Request No.</th>
+                                                                    <th rowspan="1" colspan="1">Request Type</th>
+                                                                    <th rowspan="1" colspan="1">Department</th>
+                                                                    <th rowspan="1" colspan="1">Request Created</th>
+                                                                    <th rowspan="1" colspan="1">Date Served</th>
+                                                                </tr>
+                                                            </tfoot>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-sm-5">
+                                                        <div class="dataTables_info" id="example1_info" role="status" aria-live="polite">Showing 1 to 10 of 57 entries</div>
+                                                    </div>
+                                                    <div class="col-sm-7">
+                                                        <div class="dataTables_paginate paging_simple_numbers" id="example1_paginate">
+                                                            <ul class="pagination">
+                                                                <li class="paginate_button previous disabled" id="example1_previous"><a href="#" aria-controls="example1" data-dt-idx="0" tabindex="0">Previous</a></li>
+                                                                <li class="paginate_button active"><a href="#" aria-controls="example1" data-dt-idx="1" tabindex="0">1</a></li>
+                                                                <li class="paginate_button "><a href="#" aria-controls="example1" data-dt-idx="2" tabindex="0">2</a></li>
+                                                                <li class="paginate_button "><a href="#" aria-controls="example1" data-dt-idx="3" tabindex="0">3</a></li>
+                                                                <li class="paginate_button "><a href="#" aria-controls="example1" data-dt-idx="4" tabindex="0">4</a></li>
+                                                                <li class="paginate_button "><a href="#" aria-controls="example1" data-dt-idx="5" tabindex="0">5</a></li>
+                                                                <li class="paginate_button "><a href="#" aria-controls="example1" data-dt-idx="6" tabindex="0">6</a></li>
+                                                                <li class="paginate_button next" id="example1_next"><a href="#" aria-controls="example1" data-dt-idx="7" tabindex="0">Next</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- /.box-body -->
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+
+                        <script src="../resource/vendor/AdminLTE/bower_components/jquery/dist/jquery.min.js"></script>
+                        <script src="../resource/vendor/AdminLTE/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+                        <script src="../resource/vendor/AdminLTE/dist/js/adminlte.min.js"></script>
+</body>
+
+</html>

@@ -1,17 +1,28 @@
 package controller;
 
-public class LoginAction {
+import com.opensymphony.xwork2.Action;
+
+public class LoginAction{
 	
 	
 	private String username;
 	private String password;
+	private String result;
 	
 	public String execute() {
 		
-		if(username.equals("marvin") && password.equals("1234")) {
-			return "success";
-		} else {
-			return "failed";
+		try {
+			
+			result = "failed";
+			
+			if(username.equals("marvin") && password.equals("1234")) {
+				result = "success";
+			} 
+			
+			return Action.SUCCESS;
+		}catch(NullPointerException e) {
+			result = "failed";
+			return result;
 		}
 	}
 
@@ -31,5 +42,7 @@ public class LoginAction {
 		this.password = password;
 	}
 
-	
+	public String getResult() {
+		return result;
+	}
 }

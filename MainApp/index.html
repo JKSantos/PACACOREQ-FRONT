@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+  	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>PCC Request System</title>
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+	<link rel="stylesheet" type="text/css" href="resource/vendor/AdminLTE/bower_components/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="resource/vendor/AdminLTE/bower_components/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="resource/vendor/AdminLTE/bower_components/Ionicons/css/ionicons.min.css">
+	<link rel="stylesheet" href="resource/vendor/AdminLTE/dist/css/AdminLTE.min.css">
+  	<link rel="stylesheet" href="resource/vendor/AdminLTE/dist/css/skins/_all-skins.min.css">
+  	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+</head>
+<body class="hold-transition " data-ng-app="pacacoreq">
+	
+	<div>
+		<img src="resource/images/login_header_v2.png">
+	</div>
+
+	<div class="wrapper">
+		<div class="content wrapper">
+			<section class="content">
+				<div class="row">
+					<div class="col-md-3">
+						<div class="box box-danger" data-ng-controller="loginCtrl">
+			        		<div class="box-header with-border">
+			          			<h3 class="box-title">Welcome to Pasig Catholic College</h3>
+			          			<!-- <div class="box-tools pull-right">
+			            			<span class="label label-primary">Label</span>
+			          			</div> -->
+			       			</div>
+			        		<div class="box-body">
+			          			<div class="form-group {{valid}}">
+				                  	<label for="exampleInputEmail1">Username</label>
+				                  	<input type="text" class="form-control" id="1" placeholder="Enter email" data-ng-model="username" required>
+				                </div>
+				                <div class="form-group {{valid}}">
+				                  	<label for="exampleInputEmail1">Password</label>
+				                  	<input type="password" class="form-control" id="2" placeholder="Enter email" data-ng-model="password" required>
+				                  	<div ng-show="showError"><span class="help-block">Invalid Username or Password</span></div>
+				                </div>
+				                <div class="form-group">
+				                  	<label>Login as</label>
+				                  	<select class="form-control">
+				                    	<option>User</option>
+				                    	<option>Admin</option>
+				                  	</select>
+				                </div>
+			        		</div>
+			        		<div class="box-footer">
+			        			<button type="submit" class="btn btn-default">Forgot Password?</button>
+				                <button type="submit" class="btn bg-red color-palette pull-right" data-ng-click="login()">Login</button>
+				            </div>
+			      		</div>
+					</div>
+					<div class="col-md-9">
+						<img class="image-responsive pad" src="resource/images/Capture.JPG">
+					</div>
+				</div>
+			</section>
+		</div>
+	</div>
+	<script src="./resource/vendor/AdminLTE/bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="./resource/js/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+	<script src="./resource/vendor/AdminLTE/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="./resource/vendor/AdminLTE/dist/js/adminlte.min.js"></script>
+
+	<script type="text/javascript" src="./js/index.js"></script>
+	<script type="text/javascript" src="./js/login.controller.js"></script>
+</body>
+</html> 
+
+
+
+
+
+
+<!-- 
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	
+</body>
+</html>
+
+ -->
+
+
+
+
+
